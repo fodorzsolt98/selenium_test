@@ -15,7 +15,7 @@ import org.openqa.selenium.NoSuchElementException;
 import java.util.*;  
 
 
-public class FirstSeleniumTest {
+public class SeleniumTest {
     public WebDriver driver;
     
     @Before
