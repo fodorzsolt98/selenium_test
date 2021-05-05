@@ -58,7 +58,11 @@ public class FirstSeleniumTest {
 
         Assert.assertTrue(spamPage.getBodyText().contains("SPAM"));
 
-        LogoutPage logoutPage = spamPage.logout();
+        BinPage binPage = spamPage.openBinPage();
+
+        Assert.assertTrue(binPage.getBodyText().contains("KUKA"));
+
+        LogoutPage logoutPage = binPage.logout();
 
         Assert.assertTrue(logoutPage.getTitle().contains("Newsfeed"));
 

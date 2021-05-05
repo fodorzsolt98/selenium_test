@@ -12,10 +12,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 
 
-class SearchResultPage extends PageBase {
+class BinPage extends PageBase {
 
-    public SearchResultPage(WebDriver driver) {
+    public BinPage(WebDriver driver) {
         super(driver);
-    }    
-           
+    }
+
 }

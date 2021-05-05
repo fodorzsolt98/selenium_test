@@ -18,4 +18,14 @@ class SpamPage extends PageBase {
         super(driver);
     }
 
+    public BinPage openBinPage(){
+        By spamLinkBy = By.xpath("//a[@title='Kuka']");
+        WebElement spamLink = this.waitAndReturnElement(spamLinkBy);
+
+        spamLink.click();
+
+        return new BinPage(this.driver);
+
+    }
+
 }

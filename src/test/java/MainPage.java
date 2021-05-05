@@ -13,10 +13,6 @@ import org.openqa.selenium.NoSuchElementException;
 
 
 class MainPage extends PageBase {
-
-    private By footerBy = By.className("footer-block");
-    private By searchBarTogglerBy = By.xpath("//a[@class='search-bar-toggler']/i");
-    private By searchBarBy = By.name("search");
     
     public MainPage(WebDriver driver) {
         super(driver);
@@ -43,10 +39,4 @@ class MainPage extends PageBase {
 
     }
     
-    public SearchResultPage search(String searchQuery) {
-        this.waitAndReturnElement(searchBarTogglerBy).click();
-        
-        this.waitAndReturnElement(searchBarBy).sendKeys(searchQuery + "\n");
-        return new SearchResultPage(this.driver);
-    }
 }
